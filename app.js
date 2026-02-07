@@ -1,7 +1,6 @@
 // DOM Elements
 const searchInput = document.getElementById('searchInput');
 const clearSearchBtn = document.getElementById('clearSearch');
-const classFilter = document.getElementById('classFilter');
 const categoryFilter = document.getElementById('categoryFilter');
 const materialsGrid = document.getElementById('materialsGrid');
 const emptyState = document.getElementById('emptyState');
@@ -47,18 +46,10 @@ function applyUrlParams() {
         document.body.setAttribute('data-theme', themeParam);
     }
     
-    // Apply class filter from query parameter
+    // Apply class filter from query parameter (no UI update needed)
     const classParam = urlParams.get('class');
     if (classParam && (classParam === '10' || classParam === '12')) {
         currentClassFilter = classParam;
-        
-        // Update the active pill in UI
-        classFilter.querySelectorAll('.pill').forEach(pill => {
-            pill.classList.remove('active');
-            if (pill.getAttribute('data-class') === classParam) {
-                pill.classList.add('active');
-            }
-        });
     }
 }
 
@@ -95,13 +86,6 @@ function setupEventListeners() {
     // Clear search button
     clearSearchBtn.addEventListener('click', clearSearch);
     
-    // Class filter pills
-    classFilter.addEventListener('click', (e) => {
-        if (e.target.classList.contains('pill')) {
-            handleClassFilter(e.target);
-        }
-    });
-    
     // Category filter pills
     categoryFilter.addEventListener('click', (e) => {
         if (e.target.classList.contains('pill')) {
@@ -134,17 +118,7 @@ function updateClearButton() {
     }
 }
 
-// Handle class filter
-function handleClassFilter(pill) {
-    // Update active state
-    classFilter.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
-    pill.classList.add('active');
-    
-    // Update filter value
-    currentClassFilter = pill.getAttribute('data-class');
-    
-    renderMaterials();
-}
+
 
 // Handle category filter
 function handleCategoryFilter(pill) {
