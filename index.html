@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YLearn Study Materials</title>
+    <meta name="description" content="Access study materials including Board Exam Question Papers and Solutions for SSC and HSC students">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="M21 21l-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search study materials...">
+                <button id="clearSearch" class="clear-btn" aria-label="Clear search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="filter-pills-container">
+                <!-- Class Filter -->
+                <div class="filter-group">
+                    <span class="filter-label">Class:</span>
+                    <div class="pills-wrapper" id="classFilter">
+                        <button class="pill active" data-class="all">All</button>
+                        <button class="pill" data-class="10">10th (SSC)</button>
+                        <button class="pill" data-class="12">12th (HSC)</button>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <span class="filter-label">Category:</span>
+                    <div class="pills-wrapper" id="categoryFilter">
+                        <button class="pill active" data-category="all">All</button>
+                        <!-- Categories will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Info -->
+        <div class="results-info">
+            <span id="resultsCount">0 materials found</span>
+        </div>
+
+        <!-- Materials Grid -->
+        <section class="materials-grid" id="materialsGrid">
+            <!-- Materials will be populated by JavaScript -->
+        </section>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <h3>No materials found</h3>
+            <p>Try adjusting your search or filters</p>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading-state" id="loadingState">
+            <div class="loader"></div>
+            <p>Loading materials...</p>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
