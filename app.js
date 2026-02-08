@@ -212,8 +212,8 @@ function createMaterialCard(material, index) {
         <div class="card-content">
             <h3 class="card-title">${escapeHtml(material.title)}</h3>
             <div class="card-meta">
-                <span class="card-badge class-badge">${material.class === 10 ? '10th SSC' : '12th HSC'}</span>
-                <span class="card-badge category-badge">${escapeHtml(getCategoryName(material.categoryId))}</span>
+                <!-- <span class="card-badge class-badge">${material.class === 10 ? 'SSC' : 'HSC'}</span> -->
+                <span class="card-badge category-badge category-${material.categoryId}">${escapeHtml(getCategoryName(material.categoryId))}</span>
             </div>
         </div>
         <div class="card-arrow">

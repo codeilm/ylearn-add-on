@@ -31,6 +31,42 @@ const studyMaterials = [
     title: "English 2020 Board Exam Solution",
     url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qb2wP_SprTNdwqg_dQldm1gE%3D",
   },
+  {
+    categoryId: 14,
+    class: 10,
+    title: "Hindi (Repeater) 2021 Board Exam Solution",
+    url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qbxx5M4_FDzynoRPIRmE5BLY%3D",
+  },
+  {
+    categoryId: 14,
+    class: 10,
+    title: "Hindi (Repeater) 2020 Board Exam Solution",
+    url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qb0Z8FEaXj3-NlunAFHpZq5c%3D",
+  },
+  {
+    categoryId: 14,
+    class: 10,
+    title: "Hindi 2020 Board Exam Solution",
+    url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qb79cDFIJa6wYWYKA2RFlrSc%3D",
+  },
+  {
+    categoryId: 14,
+    class: 10,
+    title: "Marathi (Repeater) 2021 Board Exam Solution",
+    url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6QbyXknHZQKfxFMjCoMPhoJU4%3D",
+  },
+  {
+    categoryId: 14,
+    class: 10,
+    title: "Marathi (Repeater) 2020 Board Exam Solution",
+    url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qb42sKEq5P_455vqYJquhwec%3D",
+  },
+  {
+    categoryId: 14,
+    class: 10,
+    title: "Marathi 2020 Board Exam Solution",
+    url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qb8LlyOtStz2Er2PEwdo6QjI%3D",
+  },
 
   // ----------- 12th class --------
 
