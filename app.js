@@ -17,14 +17,14 @@ let categories = [];
 function init() {
     showLoading(true);
     
-    // Extract unique categories from data
-    categories = extractCategories(studyMaterials);
+    // Apply URL query parameters first (sets currentClassFilter)
+    applyUrlParams();
+    
+    // Extract unique categories from data (filtered by class if specified)
+    categories = extractCategories(studyMaterials, currentClassFilter);
     
     // Populate category filter pills
     populateCategoryFilters();
-    
-    // Apply URL query parameters
-    applyUrlParams();
     
     // Set up event listeners
     setupEventListeners();
@@ -54,10 +54,14 @@ function applyUrlParams() {
 }
 
 // Extract unique categories from materials (only categories with at least 1 resource)
-function extractCategories(materials) {
+// Optionally filter by class if classFilter is provided
+function extractCategories(materials, classFilter = 'all') {
     const categoryIds = new Set();
     materials.forEach(material => {
-        categoryIds.add(material.categoryId);
+        // Only include categories from materials that match the class filter
+        if (classFilter === 'all' || material.class === parseInt(classFilter)) {
+            categoryIds.add(material.categoryId);
+        }
     });
     
     // Return only categories that exist in materials
@@ -68,6 +72,12 @@ function extractCategories(materials) {
 
 // Populate category filter pills
 function populateCategoryFilters() {
+    // Hide entire category filter if there's only 1 category (filtering is redundant)
+    if (categories.length <= 1) {
+        categoryFilter.parentElement.style.display = 'none';
+        return;
+    }
+    
     categories.forEach(category => {
         const pill = document.createElement('button');
         pill.className = 'pill';
