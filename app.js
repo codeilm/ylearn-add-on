@@ -53,18 +53,17 @@ function applyUrlParams() {
     }
 }
 
-// Extract unique categories from materials
+// Extract unique categories from materials (only categories with at least 1 resource)
 function extractCategories(materials) {
-    const categoryMap = new Map();
+    const categoryIds = new Set();
     materials.forEach(material => {
-        if (!categoryMap.has(material.categoryId)) {
-            categoryMap.set(material.categoryId, {
-                id: material.categoryId,
-                name: material.categoryName
-            });
-        }
+        categoryIds.add(material.categoryId);
     });
-    return Array.from(categoryMap.values());
+    
+    // Return only categories that exist in materials
+    return Array.from(categoryIds)
+        .filter(id => CATEGORIES[id]) // Ensure category exists in predefined list
+        .map(id => ({ id, name: CATEGORIES[id] }));
 }
 
 // Populate category filter pills
@@ -147,7 +146,8 @@ function filterMaterials() {
         
         // Search filter - OR based matching for multiple words
         if (searchQuery) {
-            const searchableText = `${material.title} ${material.categoryName} ${material.class === 10 ? '10th ssc' : '12th hsc'}`.toLowerCase();
+            const categoryName = getCategoryName(material.categoryId);
+            const searchableText = `${material.title} ${categoryName} ${material.class === 10 ? '10th ssc' : '12th hsc'}`.toLowerCase();
             
             // Split search query into individual words/terms
             const searchTerms = searchQuery.toLowerCase().split(/\s+/).filter(term => term.length > 0);
@@ -213,7 +213,7 @@ function createMaterialCard(material, index) {
             <h3 class="card-title">${escapeHtml(material.title)}</h3>
             <div class="card-meta">
                 <span class="card-badge class-badge">${material.class === 10 ? '10th SSC' : '12th HSC'}</span>
-                <span class="card-badge category-badge">${escapeHtml(material.categoryName)}</span>
+                <span class="card-badge category-badge">${escapeHtml(getCategoryName(material.categoryId))}</span>
             </div>
         </div>
         <div class="card-arrow">
