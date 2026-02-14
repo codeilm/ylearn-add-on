@@ -295,6 +295,7 @@ function createMaterialCard(material, index) {
             <div class="card-meta">
                 <!-- <span class="card-badge class-badge">${material.class === 10 ? 'SSC' : 'HSC'}</span> -->
                 <span class="card-badge category-badge category-${material.categoryId}">${escapeHtml(getCategoryName(material.categoryId))}</span>
+                ${material.medium ? `<span class="card-badge medium-badge">${escapeHtml(material.medium)} medium</span>` : ''}
             </div>
         </div>
         <div class="card-arrow">

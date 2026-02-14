@@ -75,6 +75,11 @@
     color: #f9a8d4;
 }
 
+[data-theme="dark"] .card-badge.medium-badge {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(249, 115, 22, 0.25) 100%);
+    color: #fbbf24;
+}
+
 [data-theme="dark"] .search-input:focus {
     box-shadow: var(--shadow-md), 0 0 0 3px rgba(129, 140, 248, 0.25);
 }
@@ -406,6 +411,12 @@ body {
 .card-badge.category-badge.category-14 {
     background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
     color: #db2777;
+}
+
+/* Medium Badge - Orange/Amber */
+.card-badge.medium-badge {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(249, 115, 22, 0.15) 100%);
+    color: #d97706;
 }
 
 .card-arrow {
