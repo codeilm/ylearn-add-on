@@ -70,28 +70,128 @@ const studyMaterials = [
 
   // Marathi Medium
   // Board Exam Question Papers
+
+  // Algebra
   {
     categoryId: 13,
     class: 10,
-    title: "Geography (Repeater) 2025 Board Exam Question Paper",
-    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHc6XBiDE0xEsNjxGPXPHnA4%3D",
+    title: "Algebra (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHXDfNbKPAh5Sm_4zoYToyIg%3D",
     medium: "Marathi",
   },
   {
     categoryId: 13,
     class: 10,
-    title: "Geography 2025 Board Exam Question Paper",
-    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHW8BkzvI-5uxDslNDEVtBao%3D",
+    title: "Algebra 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHZXML4Fo3DKRBUxjpffidsE%3D",
     medium: "Marathi",
   },
-    {
+  {
     categoryId: 13,
     class: 10,
-    title: "Geography (Repeater) 2024 Board Exam Question Paper",
-    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYJUyrFAqtfzSpE-XN2pcSc%3D",
+    title: "Algebra (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHXhPCqmpb2y4xRxMly22FdM%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Algebra 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHW5YkRlAJN-_kDdZS6CQF6c%3D",
     medium: "Marathi",
   },
 
+  // Geometry
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geometry (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHc5t91aG96cMt3_aX4ZKc94%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geometry 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHUe4hWzKlHHMhyRRQtOJ9pQ%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geometry (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYJFNS7EGv_HGtXw2xV9__A%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geometry 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYMntTyp7k717lPaMnKYWjY%3D",
+    medium: "Marathi",
+  },
+
+  // Science-1
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-1 (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHUHQXdatUmIfnu0ChB518NU%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-1 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHS3BZzdbNXuuoljTd25bwmY%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-1 (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHUZOoRxi7yup35sh8s0c334%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-1 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYRBGyyPtrMXOJMvMScvas4%3D",
+    medium: "Marathi",
+  },
+
+  // Science-2
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-2 (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYv3Y1QwmcyesEXCoNtBjLo%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-2 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHaoB72POZMUYBh-CaoNWzdg%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-2 (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHeiKk4ahAtTeEnxdBfpogso%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Science-2 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHZTJ-G2FswkOjxmsh_MyJAU%3D",
+    medium: "Marathi",
+  },
+
+    // History & Political Science
   {
     categoryId: 13,
     class: 10,
@@ -121,6 +221,59 @@ const studyMaterials = [
     class: 10,
     title: "History & Political Science 2024 Board Exam Question Paper",
     url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYzyP8xbe1J0LfSbKGAi-ZA%3D",
+    medium: "Marathi",
+  },
+
+  // Geography
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geography (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHc6XBiDE0xEsNjxGPXPHnA4%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geography 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHW8BkzvI-5uxDslNDEVtBao%3D",
+    medium: "Marathi",
+  },
+    {
+    categoryId: 13,
+    class: 10,
+    title: "Geography (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYJUyrFAqtfzSpE-XN2pcSc%3D",
+    medium: "Marathi",
+  },
+
+  // Marathi
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Marathi (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYre0E-1C95bI7l9lO-Wgbk%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Marathi 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYAnO5pS4677jD2iBiaJQ9E%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Marathi (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHXOxSakojbyTWLAzxBCgROc%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Marathi 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHSHS9_q5ZnOop2lyzg4EZ8Y%3D",
     medium: "Marathi",
   },
 
