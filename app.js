@@ -233,8 +233,8 @@ function filterMaterials() {
             // Split search query into individual words/terms
             const searchTerms = searchQuery.toLowerCase().split(/\s+/).filter(term => term.length > 0);
             
-            // Check if ANY of the search terms match (OR logic)
-            const hasMatch = searchTerms.some(term => searchableText.includes(term));
+            // Check if ALL of the search terms match (AND logic)
+            const hasMatch = searchTerms.every(term => searchableText.includes(term));
             
             if (!hasMatch) {
                 return false;
