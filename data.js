@@ -68,6 +68,63 @@ const studyMaterials = [
     url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qb8LlyOtStz2Er2PEwdo6QjI%3D",
   },
 
+  // Marathi Medium
+  // Board Exam Question Papers
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geography (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHc6XBiDE0xEsNjxGPXPHnA4%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 13,
+    class: 10,
+    title: "Geography 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHW8BkzvI-5uxDslNDEVtBao%3D",
+    medium: "Marathi",
+  },
+    {
+    categoryId: 13,
+    class: 10,
+    title: "Geography (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYJUyrFAqtfzSpE-XN2pcSc%3D",
+    medium: "Marathi",
+  },
+
+  {
+    categoryId: 13,
+    class: 10,
+    title: "History & Political Science (Repeater) 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHV1xsvZsv4swJ_wg7HaTw5c%3D",
+    medium: "Marathi",
+  },
+
+  {
+    categoryId: 13,
+    class: 10,
+    title: "History & Political Science 2025 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHcmbFeQi9bjd_nwF3VFFrD8%3D",
+    medium: "Marathi",
+  },
+
+    {
+    categoryId: 13,
+    class: 10,
+    title: "History & Political Science (Repeater) 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHWrhyeTsY1ahaEhJmdrqAZU%3D",
+    medium: "Marathi",
+  },
+
+  {
+    categoryId: 13,
+    class: 10,
+    title: "History & Political Science 2024 Board Exam Question Paper",
+    url: "https://app.ylearn.in/_M6BJWHkYhNnMJAnbWsyHYzyP8xbe1J0LfSbKGAi-ZA%3D",
+    medium: "Marathi",
+  },
+
+
   // ----------- 12th class --------
 
   // Board Exam Solutions

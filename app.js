@@ -10,8 +10,10 @@ const resultsCount = document.getElementById('resultsCount');
 // State
 let currentClassFilter = 'all';
 let currentCategoryFilter = 'all';
+let currentMediumFilter = 'all';
 let searchQuery = '';
 let categories = [];
+let mediums = [];
 
 // Initialize the app
 function init() {
@@ -22,9 +24,13 @@ function init() {
     
     // Extract unique categories from data (filtered by class if specified)
     categories = extractCategories(studyMaterials, currentClassFilter);
+    mediums = extractMediums(studyMaterials, currentClassFilter);
     
     // Populate category filter pills
     populateCategoryFilters();
+    
+    // Populate medium filter pills
+    populateMediumFilters();
     
     // Set up event listeners
     setupEventListeners();
@@ -70,6 +76,19 @@ function extractCategories(materials, classFilter = 'all') {
         .map(id => ({ id, name: CATEGORIES[id] }));
 }
 
+// Extract unique mediums from materials
+function extractMediums(materials, classFilter = 'all') {
+    const mediumSet = new Set();
+    materials.forEach(material => {
+        if (classFilter === 'all' || material.class === parseInt(classFilter)) {
+            if (material.medium) {
+                mediumSet.add(material.medium);
+            }
+        }
+    });
+    return Array.from(mediumSet).sort();
+}
+
 // Populate category filter pills
 function populateCategoryFilters() {
     // Hide entire category filter if there's only 1 category (filtering is redundant)
@@ -87,6 +106,28 @@ function populateCategoryFilters() {
     });
 }
 
+// Populate medium filter pills
+function populateMediumFilters() {
+    const mediumFilter = document.getElementById('mediumFilter');
+    if (!mediumFilter) return;
+    
+    // Hide if no mediums exist
+    if (mediums.length === 0) {
+        mediumFilter.parentElement.style.display = 'none';
+        return;
+    }
+    
+    mediumFilter.parentElement.style.display = '';
+    
+    mediums.forEach(medium => {
+        const pill = document.createElement('button');
+        pill.className = 'pill';
+        pill.setAttribute('data-medium', medium);
+        pill.textContent = `${medium} medium`;
+        mediumFilter.appendChild(pill);
+    });
+}
+
 // Set up event listeners
 function setupEventListeners() {
     // Search input
@@ -101,6 +142,16 @@ function setupEventListeners() {
             handleCategoryFilter(e.target);
         }
     });
+    
+    // Medium filter pills
+    const mediumFilter = document.getElementById('mediumFilter');
+    if (mediumFilter) {
+        mediumFilter.addEventListener('click', (e) => {
+            if (e.target.classList.contains('pill')) {
+                handleMediumFilter(e.target);
+            }
+        });
+    }
 }
 
 // Handle search input
@@ -141,6 +192,19 @@ function handleCategoryFilter(pill) {
     renderMaterials();
 }
 
+// Handle medium filter
+function handleMediumFilter(pill) {
+    const mediumFilter = document.getElementById('mediumFilter');
+    // Update active state
+    mediumFilter.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    
+    // Update filter value
+    currentMediumFilter = pill.getAttribute('data-medium');
+    
+    renderMaterials();
+}
+
 // Filter materials based on current filters
 function filterMaterials() {
     return studyMaterials.filter(material => {
@@ -152,6 +216,13 @@ function filterMaterials() {
         // Category filter
         if (currentCategoryFilter !== 'all' && material.categoryId !== parseInt(currentCategoryFilter)) {
             return false;
+        }
+        
+        // Medium filter
+        if (currentMediumFilter !== 'all') {
+            if ((material.medium || '') !== currentMediumFilter) {
+                return false;
+            }
         }
         
         // Search filter - OR based matching for multiple words
