@@ -1,5 +1,6 @@
 // Predefined Categories Map
 const CATEGORIES = {
+  11: "Question Bank",
   13: "Question Papers",
   14: "Board Exam Solutions",
 };
@@ -68,7 +69,66 @@ const studyMaterials = [
     url: "https://app.ylearn.in/eK3sAuUHnshFEr9VXf6Qb8LlyOtStz2Er2PEwdo6QjI%3D",
   },
 
-  // Marathi Medium
+  // ----------- Marathi Medium -----------
+
+  // Question Bank
+  {
+    categoryId: 11,
+    class: 10,
+    title: "English Question Bank",
+    url: "https://app.ylearn.in/1n0_0cVVXK7BgAzQK2tPucReeKN_mrFJpjRv1odp38w%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 11,
+    class: 10,
+    title: "Marathi Question Bank",
+    url: "https://app.ylearn.in/kGqIG412G9gDv7lo_mjrkW7aIQ3u-2Tm64A4lN-LmJQ%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 11,
+    class: 10,
+    title: "Algebra Question Bank",
+    url: "https://app.ylearn.in/aIkQIjN9Sgc4n8CgNHz08Jv22OWOExn0gmv_7TABdWs%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 11,
+    class: 10,
+    title: "Geometry Question Bank",
+    url: "https://app.ylearn.in/GBiyIv3I0t2L5_4FTJxPr1Gl4BQOafYIrqnpNh3BImM%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 11,
+    class: 10,
+    title: "Science-1 Question Bank",
+    url: "https://app.ylearn.in/U9sCy4t0U02s9krDy01k4e2GxfJ-Xpcf1r2cuLwA-a0%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 11,
+    class: 10,
+    title: "Science-2 Question Bank",
+    url: "https://app.ylearn.in/NdgMCQuUPkH_d3VA8zwtxPACqbscM6JcMouhLSMbD10%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 11,
+    class: 10,
+    title: "History & Political Science Question Bank",
+    url: "https://app.ylearn.in/rny3FUdgNvYh264aLLY_R3HsV5jZgJD07LnN_z5x6n8%3D",
+    medium: "Marathi",
+  },
+  {
+    categoryId: 11,
+    class: 10,
+    title: "Geography Question Bank",
+    url: "https://app.ylearn.in/o3aJLZh5j8QzfyRHYX_NkiZ5fQ_Ch2mS3ZL0ktICAvM%3D",
+    medium: "Marathi",
+  },
+
   // Board Exam Question Papers
 
   // Algebra
