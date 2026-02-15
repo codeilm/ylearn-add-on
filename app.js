@@ -283,6 +283,11 @@ function createMaterialCard(material, index) {
     card.rel = 'noopener noreferrer';
     card.style.animationDelay = `${index * 50}ms`;
     
+    // Show loading overlay on click (navigation proceeds normally)
+    card.addEventListener('click', () => {
+        showCardLoadingOverlay();
+    });
+    
     // Determine icon type based on URL
     const iconType = getIconType(material.url);
     
@@ -306,6 +311,16 @@ function createMaterialCard(material, index) {
     `;
     
     return card;
+}
+
+// Show loading overlay for 2 seconds while the app fetches data
+function showCardLoadingOverlay() {
+    const overlay = document.getElementById('cardLoadingOverlay');
+    overlay.classList.add('visible');
+    
+    setTimeout(() => {
+        overlay.classList.remove('visible');
+    }, 2000);
 }
 
 // Get icon type based on URL
