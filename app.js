@@ -274,6 +274,9 @@ function renderMaterials() {
     });
 }
 
+// Flag to prevent multiple card clicks
+let isCardLoading = false;
+
 // Create material card element
 function createMaterialCard(material, index) {
     const card = document.createElement('a');
@@ -283,9 +286,19 @@ function createMaterialCard(material, index) {
     card.rel = 'noopener noreferrer';
     card.style.animationDelay = `${index * 50}ms`;
     
-    // Show loading overlay on click (navigation proceeds normally)
-    card.addEventListener('click', () => {
-        showCardLoadingOverlay();
+    // Show inline loader on click, block other clicks for 2 seconds
+    card.addEventListener('click', (e) => {
+        if (isCardLoading) {
+            e.preventDefault();
+            return;
+        }
+        isCardLoading = true;
+        card.classList.add('loading');
+        
+        setTimeout(() => {
+            card.classList.remove('loading');
+            isCardLoading = false;
+        }, 2000);
     });
     
     // Determine icon type based on URL
@@ -308,19 +321,12 @@ function createMaterialCard(material, index) {
                 <path d="M9 18l6-6-6-6"></path>
             </svg>
         </div>
+        <div class="card-loader">
+            <div class="card-spinner"></div>
+        </div>
     `;
     
     return card;
-}
-
-// Show loading overlay for 2 seconds while the app fetches data
-function showCardLoadingOverlay() {
-    const overlay = document.getElementById('cardLoadingOverlay');
-    overlay.classList.add('visible');
-    
-    setTimeout(() => {
-        overlay.classList.remove('visible');
-    }, 2000);
 }
 
 // Get icon type based on URL
