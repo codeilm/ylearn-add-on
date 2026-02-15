@@ -616,3 +616,13 @@ html {
     background: rgba(102, 126, 234, 0.3);
     color: var(--text-primary);
 }
+
+/* Site Version */
+.site-version {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    opacity: 0.5;
+    padding: 16px 0 8px;
+    user-select: text;
+}
